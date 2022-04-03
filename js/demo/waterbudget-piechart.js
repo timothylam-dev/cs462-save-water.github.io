@@ -133,7 +133,7 @@ function get_monthly_readings() {
 function get_all_readings() {
   
   var xhr = new XMLHttpRequest();
-  xhr.open('GET', "http://175.41.165.232:5000//get_all_reading", false);
+  xhr.open('GET', "https://cs462-t2.herokuapp.com/http://175.41.165.232:5000//get_all_reading", false);
   xhr.send();
 
   // stop the engine while xhr isn't done
