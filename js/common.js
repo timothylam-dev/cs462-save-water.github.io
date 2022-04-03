@@ -3,7 +3,7 @@ function get_monthly_readings() {
     let month = d.getMonth()+1;
 
     var xhr = new XMLHttpRequest();
-    xhr.open('GET', "http://localhost:5000/get_reading_by_month/"+month, false);
+    xhr.open('GET', "http://175.41.165.232:5000/get_reading_by_month/"+month, false);
     xhr.send();
 
     // stop the engine while xhr isn't done

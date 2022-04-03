@@ -132,7 +132,7 @@ $(function() {
 function get_all_readings() {
   
   var xhr = new XMLHttpRequest();
-  xhr.open('GET', "http://localhost:5000/get_all_reading", false);
+  xhr.open('GET', "http://175.41.165.232:5000/get_all_reading", false);
   xhr.send();
 
   // stop the engine while xhr isn't done
@@ -181,7 +181,7 @@ function get_weekly_tags() {
 
     var result;
     var xhr = new XMLHttpRequest();
-    xhr.open('GET', `http://localhost:5000/tag_by_date?start_date=${start_date}&end_date=${end_date}`, false);
+    xhr.open('GET', `http://175.41.165.232:5000/tag_by_date?start_date=${start_date}&end_date=${end_date}`, false);
     xhr.send();
 
     // stop the engine while xhr isn't done
@@ -364,7 +364,7 @@ options: {
 function get_all_tags(){
   var xhr = new XMLHttpRequest();
   // console.log(date);
-    xhr.open('GET', `http://localhost:5000/tagnames`, false);
+    xhr.open('GET', `http://175.41.165.232:5000/tagnames`, false);
     xhr.send();
 
     // stop the engine while xhr isn't done
@@ -380,7 +380,7 @@ function add_new_tag(body){
   // console.log(body)
 
   var xhr = new XMLHttpRequest();
-  xhr.open('POST', "http://localhost:5000/insert_Tagname", false);
+  xhr.open('POST', "http://175.41.165.232:5000/insert_Tagname", false);
   xhr.setRequestHeader("Content-type", "application/json");
   xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
   xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
@@ -400,7 +400,7 @@ function add_new_tag(body){
 
 function insert_waterusage_activity(body){
   var xhr = new XMLHttpRequest();
-  xhr.open('POST', "http://localhost:5000/bulk_update_hourly_tag", false);
+  xhr.open('POST', "http://175.41.165.232:5000/bulk_update_hourly_tag", false);
   xhr.setRequestHeader("Content-type", "application/json");
   xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
   xhr.setRequestHeader('Access-Control-Allow-Origin', '*');

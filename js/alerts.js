@@ -63,7 +63,7 @@ $(function() {
 
 function get_alarm(user) {
     var xhr = new XMLHttpRequest();
-    xhr.open('GET', "http://localhost:5000/budget_by_user/"+user, false);
+    xhr.open('GET', "http://175.41.165.232:5000/budget_by_user/"+user, false);
     xhr.send();
 
     // stop the engine while xhr isn't done
@@ -127,7 +127,7 @@ function update_alarm(user){
 
 function insert_alert(body){
     var xhr = new XMLHttpRequest();
-    xhr.open('POST', "http://localhost:5000/post_budget", false);
+    xhr.open('POST', "http://175.41.165.232:5000/post_budget", false);
     xhr.setRequestHeader("Content-type", "application/json");
     xhr.send(JSON.stringify(body));
 
@@ -147,7 +147,7 @@ function update_alert(body){
     console.log(body)
 	var user = body.user;
     var xhr = new XMLHttpRequest();
-    xhr.open('PUT', "http://localhost:5000/update_budget", false);
+    xhr.open('PUT', "http://175.41.165.232:5000/update_budget", false);
     xhr.setRequestHeader("Content-type", "application/json");
     xhr.send(JSON.stringify(body));
 
