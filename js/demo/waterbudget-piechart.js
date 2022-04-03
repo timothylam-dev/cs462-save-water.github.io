@@ -94,7 +94,7 @@ Chart.pluginService.register({
 
 function get_budget () {
   var xhr = new XMLHttpRequest();
-  xhr.open('GET', "http://175.41.165.232:5000/budget_by_user/PiusLee", false);
+  xhr.open('GET', "https://cors-everywhere-me.herokuapp.com/http://175.41.165.232:5000/budget_by_user/PiusLee", false);
   xhr.send();
 
   // stop the engine while xhr isn't done
@@ -115,7 +115,7 @@ function get_monthly_readings() {
   // console.log(current_month);
 
   var xhr = new XMLHttpRequest();
-  xhr.open('GET', "http://175.41.165.232:5000//get_reading_by_month/" + current_month, false);
+  xhr.open('GET', "https://cors-everywhere-me.herokuapp.com/http://175.41.165.232:5000//get_reading_by_month/" + current_month, false);
   xhr.send();
 
   // stop the engine while xhr isn't done
@@ -133,7 +133,7 @@ function get_monthly_readings() {
 function get_all_readings() {
   
   var xhr = new XMLHttpRequest();
-  xhr.open('GET', "http://175.41.165.232:5000//get_all_reading", false);
+  xhr.open('GET', "https://cors-everywhere-me.herokuapp.com/http://175.41.165.232:5000//get_all_reading", false);
   xhr.send();
 
   // stop the engine while xhr isn't done
