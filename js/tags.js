@@ -27,8 +27,9 @@ $(function() {
   $("#select_tag").append(`<option value="${get_new_tag_ID()}">Add new activity</option>`);
 
   // Display date range picker
-  var start = moment().subtract(29, 'days');
-  var end = moment();
+  var start = moment().set({'year': 2021, 'month': 4, 'day':1}); //moment().subtract(29, 'days');
+  var end = moment().set({'year': 2021, 'month': 4, 'day':7});;
+
 
   function cb(start, end) {
     $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
