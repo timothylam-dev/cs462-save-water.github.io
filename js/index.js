@@ -63,7 +63,7 @@ function get_reading_today(){
     // console.log(today);
 
     var xhr = new XMLHttpRequest();
-    xhr.open('GET', "https://cors-everywhere-me.herokuapp.com/http://175.41.165.232:5000/watermeter_reading_by_date?date=" + today, false);
+    xhr.open('GET', "http://175.41.165.232:5000/watermeter_reading_by_date?date=" + today, false);
     xhr.send();
 
     // stop the engine while xhr isn't done
@@ -84,7 +84,7 @@ function get_monthly_readings() {
     var current_month = ((new Date()).getMonth() + 1).toString();
 
     var xhr = new XMLHttpRequest();
-    xhr.open('GET', "https://cors-everywhere-me.herokuapp.com/http://175.41.165.232:5000/get_reading_by_month/" + current_month, false);
+    xhr.open('GET', "http://175.41.165.232:5000/get_reading_by_month/" + current_month, false);
     xhr.send();
 
     // stop the engine while xhr isn't done
